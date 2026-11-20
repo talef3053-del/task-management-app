@@ -1,6 +1,6 @@
 # TaskBloom - Task Management App
 
-TaskBloom is a Flutter task management app that helps you plan your day. You can create tasks with categories, due dates, subtasks and repeat schedules, track daily progress, search and filter tasks, and get reminder notifications.
+TaskBloom is a Flutter task management app that helps you plan your day. You can create tasks with categories, due dates, subtasks and repeat schedules, track daily progress, search and filter tasks, get reminder notifications, and export your tasks as CSV or PDF.
 
 **Developed by:** Rida Riaz
 **Registration No:** FA24-BCS-197
@@ -21,15 +21,39 @@ TaskBloom is a Flutter task management app that helps you plan your day. You can
 - Repeat tasks daily or weekly, with selectable days (Mon to Sun)
 - Tabs to organize tasks: Today, Upcoming, Completed, Repeated
 - Overdue tasks are highlighted in red
-- Daily progress summary with a greeting (for example "0/1" tasks done)
+- Daily progress summary with a greeting (for example "0/3" tasks done)
 - Search tasks by keyword
 - Filter tasks: All tasks, Overdue only, Repeating only
-- Reminder notifications at the task time
-- Multiple color themes (blue and green)
+- Phone notifications at the task due time, with a sound on/off option
+- Theme options: System, Light and Dark
+- Five accent colours to personalize the app
+- Export tasks as CSV (opens in Excel or Google Sheets)
+- Export tasks as a printable PDF report
+- Email the task report as a PDF
 
 ---
 
-## Screenshots
+## Screenshots (Mobile)
+
+### Home Screen
+
+| Today | Upcoming | Completed |
+|---|---|---|
+| <img src="screenshots/mobile_today.jpeg" width="250"> | <img src="screenshots/mobile_upcoming.jpeg" width="250"> | <img src="screenshots/mobile_completed.jpeg" width="250"> |
+
+| Repeated Tasks | Search |
+|---|---|
+| <img src="screenshots/mobile_repeated.jpeg" width="250"> | <img src="screenshots/mobile_search.jpeg" width="250"> |
+
+### Add Task and Settings
+
+| New Task | Settings |
+|---|---|
+| <img src="screenshots/mobile_new_task.jpeg" width="250"> | <img src="screenshots/mobile_settings.jpeg" width="250"> |
+
+---
+
+## Screenshots (Web)
 
 ### Home Screen
 
@@ -73,6 +97,7 @@ TaskBloom is a Flutter task management app that helps you plan your day. You can
 
 - Flutter and Dart
 - Local notifications
+- CSV and PDF export
 
 ---
 
@@ -91,7 +116,7 @@ TaskBloom is a Flutter task management app that helps you plan your day. You can
    ```bash
    flutter pub get
    ```
-5. Run the app:
+5. Run the app on an emulator, a connected phone, or Chrome:
    ```bash
    flutter run
    ```
