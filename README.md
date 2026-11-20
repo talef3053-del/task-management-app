@@ -1,39 +1,97 @@
-# TaskBloom — Task Management App
+# TaskBloom - Task Management App
 
-A Flutter task planner with persistent storage, categories, recurring tasks, subtasks, progress, exports, themes, and due-time reminders.
+TaskBloom is a Flutter task management app that helps you plan your day. You can create tasks with categories, due dates, subtasks and repeat schedules, track daily progress, search and filter tasks, and get reminder notifications.
+
+**Developed by:** Rida Riaz
+**Registration No:** FA24-BCS-197
+**Course:** Mobile and App Development
+
+## Links
+
+- **GitHub Repository:** https://github.com/talef3053-del/task-management-app
+- **Demo Video:** [Watch the demo on Google Drive](https://drive.google.com/file/d/1_y-z8-GWtUblOgLfh3_wX4BoJydMtW1U/view?usp=sharing)
+
+---
 
 ## Features
-- Today, Upcoming, Completed, and Repeated task views
-- Add, edit, delete, search, filter, categorize, and complete tasks
-- Due date and time reminders
-- Daily and selected-weekday recurrence with automatic reset
-- Subtasks with completion progress
-- Light, dark, and system themes; accent colour and notification sound on/off
-- CSV and PDF export, plus share/email hand-off
-- Android/iOS use SQLite; Flutter Web stores tasks in browser-local preferences
-- Phone notifications through `flutter_local_notifications`; browser notifications through the browser Notifications API
 
-## Run on Android
-1. Install Flutter and Android Studio, then connect a phone with USB debugging enabled.
-2. From this folder run `flutter pub get`.
-3. Run `flutter devices`, then `flutter run -d <device-id>`.
-4. Open Settings → Enable phone notifications and allow the permission. Android may also ask for exact-alarm access.
+- Add new tasks with title, description, category, date and time
+- Categories: Personal, Study, Work, Health, Shopping, Other
+- Subtasks with a progress bar for each task
+- Repeat tasks daily or weekly, with selectable days (Mon to Sun)
+- Tabs to organize tasks: Today, Upcoming, Completed, Repeated
+- Overdue tasks are highlighted in red
+- Daily progress summary with a greeting (for example "0/1" tasks done)
+- Search tasks by keyword
+- Filter tasks: All tasks, Overdue only, Repeating only
+- Reminder notifications at the task time
+- Multiple color themes (blue and green)
 
-## Run in a browser
-1. Run `flutter pub get`.
-2. Run `flutter run -d chrome` (or `flutter build web`).
-3. Open Settings → Enable browser notifications and allow the permission.
-4. Keep the app tab open for scheduled browser reminders. Browsers generally require HTTPS or localhost for notifications.
+---
 
-## Notification limitation
-Phone reminders are scheduled by the operating system and can appear when the app is closed, subject to OS permissions and battery policies. Browser reminders are local in-tab timers: they can appear while the browser app is running, but are not guaranteed after the tab/browser closes or the device sleeps. Background web push requires a service worker and a push backend (such as Firebase Cloud Messaging), which is not included.
+## Screenshots
 
-## Data and exports
-Browser tasks are saved in that browser profile and are not automatically synced with the phone. CSV/PDF exports use the platform share sheet. The email option prepares a PDF to share; it does not send email automatically.
+### Home Screen
 
-## Structure
-- `lib/models/` — task, recurrence, and subtask models
-- `lib/database/` — SQLite repository on mobile and browser-local repository on web
-- `lib/providers/` — app state
-- `lib/services/` — reminders, recurrence, and export
-- `lib/screens/` and `lib/widgets/` — UI
+| Today (Overdue Task) | Upcoming Tasks |
+|---|---|
+| ![Today](screenshots/home_today.png) | ![Upcoming](screenshots/upcoming.png) |
+
+| Green Theme | Notification |
+|---|---|
+| ![Green Theme](screenshots/home_green_theme.png) | ![Notification](screenshots/notification.png) |
+
+### Search and Filter
+
+| Search and Repeated Tab | Filter Menu |
+|---|---|
+| ![Search](screenshots/search_repeated.png) | ![Filter](screenshots/filter_menu.png) |
+
+### Creating a Task
+
+| New Task Form | Category List |
+|---|---|
+| ![New Task](screenshots/new_task.png) | ![Category](screenshots/category_list.png) |
+
+| Date Picker | Time Picker |
+|---|---|
+| ![Date Picker](screenshots/date_picker.png) | ![Time Picker](screenshots/time_picker.png) |
+
+### Repeat Task
+
+![Repeat Weekly](screenshots/repeat_weekly.png)
+
+---
+
+## Demo Video
+
+[Click here to watch the demo video](https://drive.google.com/file/d/1_y-z8-GWtUblOgLfh3_wX4BoJydMtW1U/view?usp=sharing)
+
+---
+
+## Technologies Used
+
+- Flutter and Dart
+- Local notifications
+
+---
+
+## How to Run the Project
+
+1. Install [Flutter](https://docs.flutter.dev/get-started/install).
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/talef3053-del/task-management-app.git
+   ```
+3. Open the project folder:
+   ```bash
+   cd task-management-app
+   ```
+4. Install the dependencies:
+   ```bash
+   flutter pub get
+   ```
+5. Run the app:
+   ```bash
+   flutter run
+   ```
